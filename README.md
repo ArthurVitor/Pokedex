@@ -4,7 +4,6 @@ This is a simple pokedex created with Django and JavaScript. It allows users to 
 ### Features
 - Search for Pokemon by name or number
 - View information about each Pokemon, including its type, abilities, and stats
-- Add Pokemon to a favorites list for easy access later
 
 ### Requirements
 - Python 3.7+
