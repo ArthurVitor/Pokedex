@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'title' %}Pokemon Info{% endblock %}
+
+{% block 'content' %}
+<div class="container">
+    <div class="card-display">
+        <input type="text" name="" id="" class="search_bar" placeholder="What is the pokemon's name?">
+
+        <div class="normal_sprite">
+            <!--Normal Sprite Begin-->
+            <div class="sprite_text">
+                Sprite
+            </div>
+            <div class="sprite">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="">
+            </div>
+            <!--Normal Sprite End-->
+        </div>
+
+        <div class="shiny_sprite">
+            <!--Shiny Sprite Begin-->
+            <div class="sprite_text">
+                Shiny Sprite
+            </div>
+            <div class="sprite">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="">
+            </div>
+            <!--Shiny Sprite End-->
+        </div>
+
+        <div class="types">
+            <!--Type(s) Begin-->
+            <div class="sprite_text">
+                Type (s)
+            </div>
+            <div class="sprite">
+                <img src="{% static 'img/Pokémon_Fairy_Type_Icon.svg.png' %}" alt="" class="type_image">
+                <img src="{% static 'img/Pokémon_Normal_Type_Icon.svg.png' %}" alt="" class="type_image">
+            </div>
+            <!--Type(s) End-->
+        </div>
+    </div>
+</div>
+{% endblock %}
