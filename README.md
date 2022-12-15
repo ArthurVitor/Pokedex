@@ -8,7 +8,7 @@ This is a simple pokedex created with Django and JavaScript. It allows users to 
 ### Requirements
 - Python 3.7+
 - Django 3.0+
-- JavaScript
+- Node.Js
 
 ### Installation
 Clone this repository: git clone https://github.com/ArthurVitor/Pokedex.git
