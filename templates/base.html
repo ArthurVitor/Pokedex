@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block 'title' %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!--Css Link-->
     <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
 </head>
 <body>
@@ -17,8 +17,8 @@
             <div class="nav-buttons">
                 <p>
                     <a href="{% url 'index' %}">Home</a>
-                    <a href="https://www.linkedin.com/in/arthur-vitor/">Contact</a>
-                    <a href="">Repository</a>
+                    <a href="https://www.linkedin.com/in/arthur-vitor/" target="_blank">Contact</a>
+                    <a href="https://github.com/ArthurVitor/Pokedex" target="_blank">Repository</a>
                     <a href="{% url 'pokemon_info' %}">Search</a>
                 </p>
             </div>
@@ -30,4 +30,5 @@
 
 {% endblock %}
 </body>
+<script src="{% static 'js/script.js' %}"></script>
 </html>

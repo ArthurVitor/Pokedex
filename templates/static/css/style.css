@@ -13,27 +13,84 @@ html {
     overflow-x: hidden;
 }
 
-.green {
-    background-color: rgba(0, 128, 0, 0.481) !important;
+.normal {
+    background-color: #6767679a !important;
 }
 
-.orange {
+.fire {
     background-color: rgba(255, 68, 0, 0.528) !important;
 }
 
-.fixed {
-    position: static !important;
+.water {
+    background-color: #004fcf90 !important;
+}
+
+.electric {
+    background-color: #f8e8339d !important;
+}
+
+.grass {
+    background-color: rgba(0, 128, 0, 0.481) !important;
+}
+
+.ice {
+    background-color: #49b8c492 !important;
+}
+
+.fighting {
+    background-color: #9c452380 !important;
+}
+
+.poison {
+    background-color: #72425c89 !important;
+}
+
+.ground {
+    background-color: #96612f85 !important;
+}
+
+.flying {
+    background-color: #00ffff7e !important;
+}
+
+.psychic {
+    background-color: #c12df78e !important;
+}
+
+.bug {
+    background-color: #2a672ca7 !important;
+}
+
+.rock {
+    background-color: #6e645a89 !important;
+}
+
+.ghost {
+    background-color: #5c000289 !important;
+}
+
+.dragon {
+    background-color: #b09f4182 !important;
+}
+
+.dark {
+    background-color: #15253e87 !important;
+}
+
+.steel {
+    background-color: #68767f81 !important;
+}
+
+.fairy {
+    background-color: #ff349a8d !important;
 }
 
 .search_bar {
-    display: grid;
-    margin-left: 12px;
     margin-top: 10px;
     width: 23.25rem;
     height: 2.375rem;
     background-color: rgb(195, 193, 193);
     border-radius: 5px;
-    place-items: center;
     border: 0px ;
     text-align: center;
     font-weight: 600;
@@ -134,8 +191,17 @@ main {
 }
 
 .container {
+    display: grid;
+    place-items: center;
     margin-top: 15px;
 }
+
+.search_container {
+    display: grid;
+    place-items: center;
+    margin-top: 15px;
+}
+
 
 .card-container {
     display: flex;
@@ -165,16 +231,28 @@ main {
     border-top: 1px solid black;
 }
 
-.container {
-    display: grid;
-    place-items: center;
-}
-
 .card-display {
     height: 430px;
     width: 400px;
     background-color: lightgray;
     text-align: center;
     border-radius: 10px;
+}
 
+.footer_bar {
+    display: grid;
+    margin-top: 15px;
+    background-color: #ff0000;
+    width: 100vw;
+    height: 5vh;
+    place-items: center;
+}
+
+.footer_bar > span {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.footer_bar > span:hover {
+    cursor: pointer;
 }
