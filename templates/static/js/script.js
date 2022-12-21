@@ -48,10 +48,12 @@ async function replace_data() {
   // Assigning normal sprite
   let nr_sp = document.getElementById('normal_sprite_space')
   nr_sp.setAttribute('src', sprite['front_default'])
+  nr_sp.dataset.pokemon = element
 
   // Assigning shiny sprite
   let sh_sp = document.getElementById('shiny_sprite_space')
   sh_sp.setAttribute('src', sprite['front_shiny'])
+  sh_sp.dataset.pokemon = element
 
   // Assigning the type(s)
   let tp_sp = document.getElementById('type_space')
@@ -94,12 +96,9 @@ async function load_more() {
 
     const card = document.createElement('div')
     card.className = `card ${tp[0]['type']['name']}`
-    const a = document.createElement('a')
-    a.href = `/detailed_info:${nm}`
     const img = document.createElement('img')
-    img.src = `${spr['front_default']}`
-    a.appendChild(img)
-    card.appendChild(a)
+    img.src = spr['front_default']
+    card.appendChild(img)
     const p = document.createElement('p')
     p.innerHTML = `${nm.charAt(0).toUpperCase() + nm.slice(1)}`
     card.appendChild(p)
@@ -108,4 +107,36 @@ async function load_more() {
   }
 
   ls_pk_id += 4
+}
+
+async function change_view(element){
+  const data = await getPokemonData(element.dataset.pokemon)
+  const id = element.id
+  const spc = document.getElementById(element.id)
+
+  if(element.dataset.flipped == 'false') {
+    if(id.includes('shiny')) {
+
+      spc.setAttribute('src', data['sprites']['back_shiny'])
+      element.dataset.flipped = 'true'
+      console.log(element.dataset.flipped);
+    } else {
+
+      spc.setAttribute('src', data['sprites']['back_default'])
+      element.dataset.flipped = 'true'
+      console.log(element.dataset.flipped);
+    }
+  } else {
+
+    if(id.includes('shiny')) {
+      spc.setAttribute('src', data['sprites']['front_shiny'])
+      element.dataset.flipped = 'false'
+      console.log(element.dataset.flipped);
+
+    } else {
+      spc.setAttribute('src', data['sprites']['front_default'])
+      element.dataset.flipped = 'false'
+      console.log(element.dataset.flipped);
+    }
+  }
 }
