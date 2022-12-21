@@ -1,20 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block 'title' %}Pokemon Info{% endblock %}
+{% block 'title' %} Pokedex - Detailed Info {% endblock %}
 
 
 {% block 'content' %}
 
 <div class="search_container">
         <div class="card-display">
-            <input type="text" name="" id="poke_name" class="search_bar" placeholder="What is the pokemon's name?" oninput="get_data()">
             <div class="normal_sprite">
                 <!--Normal Sprite Begin-->
                 <div class="sprite_text">
                     Sprite
                 </div>
                 <div class="sprite">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png" alt="" id="normal_sprite_space" >
+                    <img src="{{ front_default }}" alt="" id="normal_sprite_space" >
                 </div>
                 <!--Normal Sprite End-->
             </div>
@@ -25,7 +24,7 @@
                     Shiny Sprite
                 </div>
                 <div class="sprite">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493.png" alt="" id="shiny_sprite_space">
+                    <img src="{{ shiny_default }}" alt="" id="shiny_sprite_space">
                 </div>
                 <!--Shiny Sprite End-->
             </div>

@@ -92,9 +92,12 @@ function insert_pokemons(data){
   for(let i = 0; i < 4; i++){
     const card = document.createElement('div')
     card.className = `card ${tp[i][0]['type']['name']}`
+    const a = document.createElement('a')
+    a.href = `/detailed_info:${nm[i]}`
     const img = document.createElement('img')
     img.src = `${spr[i]['front_default']}`
-    card.appendChild(img)
+    a.appendChild(img)
+    card.appendChild(a)
     const p = document.createElement('p')
     p.innerHTML = `${nm[i].charAt(0).toUpperCase() + nm[i].slice(1)}`
     card.appendChild(p)
