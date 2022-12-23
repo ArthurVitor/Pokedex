@@ -7,25 +7,25 @@
 
 <div class="search_container">
         <div class="card-display">
-            <input type="text" name="" id="poke_name" class="search_bar" placeholder="What is the pokemon's name?" oninput="get_data()">
+            <input type="text" name="" id="poke_name" class="search_bar" placeholder="What is the pokemon's name?" oninput="replace_data()">
             <div class="normal_sprite">
                 <!--Normal Sprite Begin-->
-                <div class="sprite_text">
+                <div class="sprite_text" id="sprite_text">
                     Sprite
                 </div>
                 <div class="sprite">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png" alt="" id="normal_sprite_space" >
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png" alt="" id="normal_sprite_space" data-pokemon="arceus" data-flipped="false" onmouseover="change_view(this)">
                 </div>
                 <!--Normal Sprite End-->
             </div>
 
             <div class="shiny_sprite">
                 <!--Shiny Sprite Begin-->
-                <div class="sprite_text">
+                <div class="sprite_text" id="sprite_text">
                     Shiny Sprite
                 </div>
                 <div class="sprite">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493.png" alt="" id="shiny_sprite_space">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493.png" alt="" id="shiny_sprite_space" data-pokemon="arceus" data-flipped="false" onmouseover="change_view(this)">
                 </div>
                 <!--Shiny Sprite End-->
             </div>
@@ -37,9 +37,10 @@
                 </div>
                 <div class="sprite" id="type_space">
                     <img src="https://images2.imgbox.com/e5/f7/SuyNkdSE_o.png" alt="" class="type_image">
+
                 </div>
                 <!--Type(s) End-->
             </div>
         </div>
-    </div>
+</div>
 {% endblock %}
