@@ -2,6 +2,11 @@ from django.shortcuts import render
 import requests
 
 
+# This method is useless because I can do the same request using JS
+# The reason why I'm not doing is because in the time I created this pokedex
+# I was trying to learn as much django I could, so I choose to send a context to the html
+# And then insert there
+
 def make_request(id):
     data = requests.get(f'https://pokeapi.co/api/v2/pokemon/{id}').json()
     return data
