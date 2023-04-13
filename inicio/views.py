@@ -9,6 +9,8 @@ def make_request(id):
 
 # Create your views here.
 def index(request):
+    request.ola = 'teste'
+    print(request.ola)
     return render(request, 'inicio_templates/index.html')
 
 
